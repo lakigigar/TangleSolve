@@ -36,7 +36,7 @@
 - **Publication:** *Bioinformatics* 18(7), 1011–1012 (July 2002), DOI [10.1093/bioinformatics/18.7.1011](https://doi.org/10.1093/bioinformatics/18.7.1011).
 - **Contact listed in the paper:** `mariel@math.berkeley.edu` (historical, not verified as current).
 - **Purpose:** analyze site-specific DNA recombination with the mathematical tangle model. It computes and visualizes recombination mechanisms consistent with substrate and product knot/link observations. The paper also presents it as a teaching aid.
-- **Original delivery:** a standalone Java program and a web-based Java applet. No executable or applet archive has been recovered.
+- **Original delivery:** a standalone Java program and a web-based Java applet. The standalone `GInterface.jar` has been recovered; the two applet archives have not.
 
 ## Documented application interface
 
