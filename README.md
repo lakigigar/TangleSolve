@@ -2,7 +2,7 @@
 
 Static reconstruction of the historical TangleSolve website from user-supplied Wayback files. The requested [2 February 2004 Wayback capture](https://web.archive.org/web/20040202121735/http://bio.math.berkeley.edu/TangleSolve/) is the target reference.
 
-The GitHub Pages-ready site is in [`docs/`](docs/). Start with [research/site-inventory.md](research/site-inventory.md) for recovered pages and remaining gaps. The original saved files are preserved in `wayback/`.
+The GitHub Pages-ready site is in [`docs/`](docs/). Start with [research/session-handoff.md](research/session-handoff.md) for the complete project handoff, then [research/site-inventory.md](research/site-inventory.md) for recovered pages and remaining gaps. The original saved files are preserved in `wayback/`.
 
 ## Modern web app
 
