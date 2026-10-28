@@ -168,6 +168,25 @@ export function solveByCrossings(substrate, crossingCount) {
   return enumeratePlats(crossingCount).flatMap(product => solveNonprocessive(substrate, product));
 }
 
+// The 2001 solver lists separate Oᶠ/Oᵇ splits even when one summand is
+// integral and both splits describe the same rational outside tangle O.
+// The 2004 figure counts each such mechanism once.
+export function collapseOutsideTangles(solutions) {
+  const groups = new Map();
+  for (const solution of solutions) {
+    const rationalOutside = solution.of.d === 1 || solution.ob.d === 1;
+    const outside = rationalOutside
+      ? textRat(add(solution.of, solution.ob))
+      : `${textRat(solution.of)}+${textRat(solution.ob)}`;
+    const key = [textRat(solution.substrate.fraction), textRat(solution.product.fraction),
+      textRat(solution.r), rationalOutside ? 'rational' : 'sum', outside].join('|');
+    if (!groups.has(key)) groups.set(key, { ...solution, outside,
+      representations: [{ of: solution.of, ob: solution.ob }] });
+    else groups.get(key).representations.push({ of: solution.of, ob: solution.ob });
+  }
+  return [...groups.values()];
+}
+
 export function parseCandidateSet(value) {
   const tokens = value.split(/[;\n]+/).map(x => x.trim()).filter(Boolean);
   const result = [];
@@ -191,7 +210,7 @@ export function solveObservationSets(substrates, products) {
       result.set(id, solution);
     }
   }
-  return [...result.values()];
+  return collapseOutsideTangles([...result.values()]);
 }
 
 export function predict(solution, round) {

@@ -160,6 +160,12 @@ function renderDisplay() {
     tangleGallery.append(figure);
   }
   target.append(tangleGallery);
+  if (solution.representations?.length > 1) {
+    const note = document.createElement('p');
+    note.className = 'diagram-caption';
+    note.textContent = `Outside tangle O = ${solution.outside}. Equivalent splits: ${solution.representations.map(x => `${textRat(x.of)} + ${textRat(x.ob)}`).join(' = ')}.`;
+    target.append(note);
+  }
   if (solution.rounds && solution.rounds > 1) {
     const list = document.createElement('div');
     list.className = 'equations';

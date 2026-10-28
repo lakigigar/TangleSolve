@@ -12,11 +12,12 @@ The first browser-based implementation is in `docs/app/`. It is a static site su
 - Selectable 4-plat table through ten crossings, with 102 recovered knot images from the Java archive. Missing nine- and ten-crossing images receive generated 4-plat drawings.
 - Rational-tangle and 4-plat SVG projections ported from the recovered Java drawing code. The combined equation display remains schematic.
 - Candidate sets for substrates and products, including crossing-number sets; alternative candidates in processive rounds and optional unknown product order.
-- A Java-derived fixture for the Xer six-crossing to seven-crossing example. The browser solver finds the same 16 solutions as the recovered **2001** standalone JAR, up to equivalent fraction labels.
+- A Java-derived fixture for the Xer six-crossing to seven-crossing example. The raw browser solver finds the same 16 representations as the recovered **2001** standalone JAR, up to equivalent fraction labels. The interface groups four pairs of equivalent rational outside-tangle splits, yielding the 12 mechanisms shown in the 2004 paper figure.
 
 ## Material limitations
 
-- The archived `tsolvefigure.jpg` shows an applet reporting 12 solutions for the Xer example. The recovered 2001 standalone JAR reports 16. The two applet JARs are still missing, so the difference cannot yet be explained from their source.
+- The explanation of the 16-to-12 difference is strongly supported by the counts and tangle fractions, but remains an inference until the two applet JARs are recovered. The 2004 paper figure reports six rational outside tangles and six sums of two rationals; grouping the 2001 solver's 10 rational representations gives six rational mechanisms, while its six sum representations remain distinct.
+- For example, the recovered solver lists `O = 0 + (-6/5)` and `O = 4/5 + (-2)` for the same product and recombinant twist. Both equal the rational tangle `-6/5`. There are four such pairs across the seven possible products. The grouping keeps every original representation available in the selected mechanism's display.
 - The combined equation SVG remains schematic; it does not join the individual tangle projections into one planar knot diagram.
 - The rational-R processive branch is an experimental correction inferred from the source equations; the recovered Java `solve3` implementation fails to return a mathematically valid tested case. It should be checked against a later applet or independent reference.
 - Browser interaction has not been visually tested in this workspace because browser automation and a local HTTP server are blocked by the sandbox. Syntax, solver fixtures, generated SVGs, generated-file links, and DOM selector references have been checked.

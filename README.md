@@ -8,7 +8,7 @@ The GitHub Pages-ready site is in [`docs/`](docs/). Start with [research/site-in
 
 [`docs/app/`](docs/app/) is a browser-based reconstruction. It accepts 4-plat vectors, fractions, Conway symbols, crossing-number sets, and alternative substrate or product candidates. It solves non-processive equations under the rational-tangle assumptions, handles processive examples, provides direct tangle input, and includes a knot table with images extracted from the recovered JAR. Solutions show exact fractions, generated rational-tangle projections, knot or link diagrams, and a schematic combined equation. Solver output has been compared with the recovered 2001 Java program, but the 2004 applet archives are still missing.
 
-See [research/web-app-status.md](research/web-app-status.md) for implemented behavior, validation, and remaining work. The Xer example has been compared with the recovered 2001 Java program; its output differs from the 2004 applet screenshot.
+See [research/web-app-status.md](research/web-app-status.md) for implemented behavior, validation, and remaining work. The Xer example has been compared with the recovered 2001 Java program. Grouping equivalent rational outside-tangle splits reconciles its 16 representations with the 12 mechanisms shown in the 2004 paper figure.
 
 The app is static and needs no server code. To preview locally, run `python3 -m http.server 8000 --directory docs` and open `http://localhost:8000/app/`. Run `node --test tests/solver.test.mjs` for the current solver checks.
 

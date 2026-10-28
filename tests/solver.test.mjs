@@ -66,6 +66,14 @@ test('candidate sets accept alternatives and crossing-number tables', () => {
   assert.ok(combined.some(item => item.substrate.label === '1'));
 });
 
+test('Xer representations group to the twelve mechanisms in the 2004 figure', () => {
+  const mechanisms = solveObservationSets(parseCandidateSet('(1 4 1)'), parseCandidateSet('#7'));
+  assert.equal(mechanisms.length, 12);
+  assert.equal(mechanisms.filter(item => item.of.d === 1 || item.ob.d === 1).length, 6);
+  assert.equal(mechanisms.filter(item => item.of.d !== 1 && item.ob.d !== 1).length, 6);
+  assert.equal(mechanisms.filter(item => item.representations.length === 2).length, 4);
+});
+
 test('generated projections are finite SVGs for representative tangles and plats', () => {
   for (const tangle of [{ n: 0, d: 1 }, { n: 1, d: 0 }, { n: -4, d: 3 }, { n: 5, d: 6 }]) {
     const svg = renderTangleSvg(tangle);
