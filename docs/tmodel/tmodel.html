@@ -1,0 +1,482 @@
+<!doctype html>
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML//EN">
+
+<!-- saved from url=(0105)https://web.archive.org/web/20040213002050fw_/http://bio.math.berkeley.edu/TangleSolve/tmodel/tmodel.html -->
+<html><head><meta charset="utf-8"/><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+
+
+
+
+
+<!-- End Wayback Rewrite JS Include -->
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="The tangle model" name="description"/>
+<meta content="modelfinal" name="keywords"/>
+<meta content="document" name="resource-type"/>
+<meta content="global" name="distribution"/>
+<meta content="Microsoft FrontPage 2.0" name="GENERATOR"/>
+<title>The tangle model</title>
+</head>
+<body bgcolor="#FFFFFF" marginheight="1" marginwidth="1">
+<p> </p>
+<p><a name="math"><font size="6"><strong>Mathematical Background</strong></font></a></p>
+<p><font size="4">Site-specific recombination affects the
+topology of circular DNA substrates. These changes in topology
+can be characterized experimentally. Based on the experimental
+data, biological models for enzymatic mechanisms can be proposed.
+In general a few mechanisms are envisioned in the lab. But, how
+would we know that there are no other possible models that would
+also account for the experimental data? Only a mathematical
+treatment of this problem can give a definite answer. In this
+chapter we introduce the tools from the fields of Knot Theory and
+Low Dimensional Topology that will be needed to analyze
+site-specific recombination reactions. </font></p>
+<h1><a name="knots"><font size="5">Knots</font></a><font size="5">
+</font></h1>
+<p><font size="4">This section introduces basic definitions and
+results about knots that will be used throughout our work.</font></p>
+<p><font size="4">Take a piece of string, tie any number of knots
+in it, and glue the ends together. Neglecting the thickness of
+the string, we have our intuitive definition of a <strong>knot</strong>.
+More formally, a <strong>knot</strong> is a simple closed curve
+embedded in 3-space. A <strong>link</strong> is a disjoint union
+of such simple closed curves. We say that two knots A and B are
+equivalent if and only if A can be smoothly deformed into B. If A
+and B are equivalent, we say A = B.</font></p>
+<p><font size="4">A knot that can be deformed to lie on a plane,
+with no crossings, is called a <b>trivial knot</b>, or the <b>unknot</b>.
+Likewise, a trivial link with two components consists of two
+circles that can be deformed to lie flat on a plane. </font></p>
+<p><font size="4">Lay a knot on a plane, and note the positions
+where one string crosses over or under the other. This leads to a
+2-dimensional representation of a 3-dimensinal knot. We call this
+a <strong>projection</strong> of a knot. Count the number of
+crossings in a projection of a knot. The <strong>crossing number </strong>of
+a knot is the minimum number of crossings over all projection of
+a knot. For example, the crossing number of a trefoil knot is 3.</font></p>
+<p><font size="4">The problem of deciding when two knots or links
+are equivalent is not easy. Many invariants of knots and links,
+both geometric and algebraic, have been developed throughout the
+years. Some examples of geometric invariants are the <i>crossing
+number</i> of a link, and the <i>linking number</i> of a link
+with two oriented components.</font></p>
+<p><font size="4">The following definitions will lead to another
+knot invariant. </font></p>
+<p><font size="4">Let <em>K</em> be a link with a fixed
+orientation. The link obtained after inverting the orientation of
+<em>K</em> is denoted by <em>(-K)</em>, and it is called the <strong>inverse</strong>
+of <em>K</em>. Likewise, the link obtained by reflection of <em>K</em>
+with respect to a plane, is denoted by <em>K*</em> and called the
+<strong>mirror image</strong> of <em>K</em>. If <em>K = (-K)</em>,
+then <em>K </em>is said to be <strong>invertible</strong>. <em>K</em>
+is <strong>achiral</strong> if <em>K = K*</em>. If <em>K</em></font><font face="Symbol" size="4"><em> </em>� </font><font size="4"><em>K*</em>,
+<em>K</em> is said to be <strong>chiral</strong>.</font></p>
+<p align="center"><font size="4"><img height="200" src="diag1.jpg" width="450"/></font></p>
+<p><a name="tangle"><font size="5"><strong>2-string tangles</strong></font></a></p>
+<p><font size="4">Consider the unit ball in <img alt="$\Re ^{3}$" height="17" src="img1.gif" width="23"/>. Take the XY plane, and
+consider the positive Y axis as pointing north, and of the
+positive X axis as pointing east. Let {NE, NW, SE, SW} be four
+fixed equatorial points of the unit ball. A <strong>2-string
+tangle</strong> can be thought of as two strands with end-points
+{NE, NW, SE, SW} together with the unit ball to that contains
+them. The basic definition is illustrated below.</font></p>
+<p align="center"><font size="4"><img height="158" src="tangle_fig.jpg" width="457"/></font></p>
+<p><font size="4">As is the case for knots, tangles are also
+studied through their projections. A <strong>tangle diagram</strong>
+is the image of the 2-string tangle when it is projected onto the
+equatorial disc. Two tangle diagrams represent equivalent tangles
+if strandss of the one can be deformed into strands of the other.
+</font></p>
+<p><font size="4">There are 3 types of tangles:</font></p>
+<ul>
+<li><font size="4">Rational Tangle: a, a') any<strong>
+        rational</strong> tangle can be obtained from the <strong>trivial</strong>
+        tangle shown in a) by moving the strands' ends on the
+        boundary of the ball.</font></li>
+<li><font size="4">Locally knotted: b) a<strong> locally
+        knotted</strong> tangle contains a knotted strand.</font></li>
+<li><font size="4">Prime Tangle: c) tangles which are not
+        rational or locally knotted are said to be <strong>prime</strong>.</font></li>
+</ul>
+<p align="center"><font size="4"><img height="273" src="tanglediagram_fig.jpg" width="591"/></font></p>
+<p><font size="4">Given two tangles A and B, the <strong>tangle
+addition</strong> A + B is defined in the figure below. The
+resulting object A + B is obtained by gluing NE of A to NW of B,
+and SE of A to SW of B. Note that the sum of two tangles is not
+always a tangle since the strands of (A + B) can include a simple
+closed curve.</font></p>
+<p align="center"><font size="4"><img height="216" src="add_fig.jpg" width="393"/></font></p>
+<p><font size="4">The figure below is used to define two other
+tangle operations called numerator and denominator. Given a
+tangle A, these operations are denoted by N(A) and D(A),
+respectively, and they prduce knots and 2-component links. N(A+B)
+and D(A+B) can be defined in a similar way. Note that if A+B is
+not a 2-string tangle then the result of N(A+B) or D(A+B) can be
+a link of more than two components.</font></p>
+<p align="center"><font size="4"><img height="160" src="num_fig1.jpg" width="458"/></font></p>
+<p><a name="rattangle"><font size="5"><strong>Rational Tangle</strong></font></a><font size="5"><strong><a></a></strong></font></p>
+<p><a name="rattangle"><font size="4">Rational tangle is a tangle
+whose strands can be deformed to a trivial tangle by moving the
+ends of strands on the boundary. Rational tangles admit a
+classification in which a unique standard vector with integer
+entries is associated to each equivalence class of rational
+tangles. Such vector <strong>(a</strong></font><font size="3"><sub><strong>1</strong></sub></font><font size="4"><strong>, .., a</strong></font><font size="3"><sub><strong>m</strong></sub></font><font size="4"><strong>)</strong> must satisfy the following
+conditions.</font></a></p>
+<ol>
+<li><a name="rattangle"><font size="4">a<sub>i</sub> </font><font face="Symbol" size="4">�</font><font size="4"> 0 when 0
+        &lt; i &lt; m</font></a></li>
+<li><a name="rattangle"><font size="4">all entries are of the
+        same sign</font></a></li>
+<li><a name="rattangle"><font size="4">a</font><font size="3"><sub>1</sub></font><font size="4"> does not equal to 1 nor -1.</font></a></li>
+</ol>
+<p><a name="rattangle"><font size="4">The tangle can be
+constructed from its associated vector as shown in the figure
+below. Four exceptional tangles are excluded by the convention,
+they can be visualized at the bottom of figure together with
+their standard vector.<br/>
+<br clear="all"/>
+</font></a></p>
+<p align="center"><a name="rattangle"><font size="4"><img height="383" src="canonical_fig.jpg" width="617"/></font></a></p>
+<p align="center"><a name="rattangle"><font size="4"><b>Canonical
+form of rational tangles.</b></font><font size="3"> At the bottom
+are represented the four exceptions.</font></a></p>
+<p><a name="rattangle"><font size="4">For each equivalence class
+of rational tangles, denoted by A, the standard vector associated
+to it is called the Conway Symbol for A. To each Conway symbol
+can be associated a unique extended rational number <img align="middle" alt="$\frac{{\beta }}{{%%
+\alpha }}\in Q\cup \{\infty \}$" height="41" src="img82.gif" width="106"/><br/>
+</font></a></p>
+<p align="center"><a name="rattangle"><font size="4"><img alt="\begin{displaymath}
+{\frac{\beta }{\alpha }}=a_{1}+{\frac{1}{\displaystyle a_{2...
+...strut 1}{\displaystyle...+{\frac{\strut 1}{%%
+a_{m}}}}}}}}}
+\end{displaymath}" height="124" src="img85.gif" width="223"/> </font></a></p>
+<p align="left"><a name="rattangle"><font size="4">A tangle is <strong>integral</strong>
+(shown in the figure below), if its canonical vector is of the
+form (z) for some integer z. Note that integral tangles are in
+one-to-one correspondence with the integers, and they are drawn
+as a row of horizontal twists (positive or negative).</font></a></p>
+<p align="center"><a name="rattangle"><font size="4"><img height="100" src="integral_fig.jpg" width="160"/></font></a></p>
+<p><a name="4-plat"><font size="5"><strong>4-plats</strong></font></a></p>
+<p><font size="4">A 4-plat is a knot or link that admits a
+representation that consists of a braid on 4 strings closed up as
+in figure below.</font></p>
+<p align="center"><font size="4"><img height="291" src="4-plat_fig.jpg" width="472"/></font></p>
+<p><font size="4">The classification of 4-plats shows that each
+4-plat K is characterized by a vector &lt;c1,c2,..,c2n+1&gt; with
+an odd number of positive integer entries and, such that, c1 and
+c2n+1 are different from zero. A rational number is assigned, by
+means of the following continued fraction calculation, to each
+vector:</font></p>
+<p align="center"><font size="5"><strong><img height="88" src="img113.gif" width="131"/></strong></font></p>
+<p><font size="4">The link K is denoted <img height="34" src="img114.gif" width="55"/> termed the Conway notation for K.</font></p>
+<p><font size="4">4-plats are classifed as follows:</font></p>
+<p><img height="61" src="img115.gif" width="539"/></p>
+<h1><a name="tgmodel">The tangle model</a> </h1>
+<p><font size="4">The tangle model was first introduced by De
+Witt Sumners in the eighties [T7]. In 1990 Ernst and Sumners used
+the model to analyze the Tn3 resolvase site-specific
+recombination system [T2]. They proved mathematically that, in a
+processive recombination event, Tn3 resolvase binds to its
+unknotted, negatively supercoiled substrate (sites in direct
+repeat), fixes three negative supercoils, and each round of
+recombination introduces a positive crossing in the domain. It
+was also proved that, given biologically reasonable assumptions,
+this is the only possible explanation for the experimental data.
+In this section we describe the tangle model and review all its
+assumptions for both processive and non-processive recombination.
+</font></p>
+<h1><a name="stmts">Statement and assumptions</a> </h1>
+<p><font size="4">The main goal when doing tangle analysis of
+experimental data arising from site-specific recombination
+reactions is to understand the enzymatic mechanism. The tangle
+model studies topological changes in DNA caused by the enzymes.
+The mechanism of recombinases involves local interaction of two
+DNA strands.</font></p>
+<p align="center"><font size="4"><img src="local.jpg"/></font></p>
+<p><font size="4">One of the goals of the tangle model is to
+compute the topology of the synaptosome (enzyme + bound DNA),
+before and after the enzymatic action. In an attempt to translate
+an enzymatic action into the language of mathematical 2-string
+tangles, consider the DNA substrate molecule with its two
+recombination sites as an embedding of one or more circles in
+3-space. Therefore the DNA substrate is seen as a knot or a link.
+Each circular DNA molecule is represented by the axis of its
+double-helix (a simple closed curve in <img alt="$\Re ^{3}$" height="17" src="img1.gif" width="23"/>). A single event of
+recombination consists of two movements. A <u>global movement</u>
+where, by ambient isotopy of <img alt="$\Re ^{3}$" height="17" src="img1.gif" width="23"/>, the recombination sites are juxtaposed
+inside a ball. The ball represents the enzyme, together with any
+accessory protein(s) that bind the DNA substrate and are required
+for recombination. The ball with the two strands of bound DNA
+represent, by definition, the local synaptic complex (or
+synaptosome). The second movement is a <u>local movement</u> in
+the interior of the ball where two strands are cut at the
+recombination sites, and then recombined. At this stage, the part
+of the knot or link that was left in the exterior of the ball
+remains fixed. Mathematically, the ball divides the space into
+two regions. Each region will be defined based on its biological
+role. </font></p>
+<p><font size="4">A ball with two embedded strands is, by
+definition, a 2-string tangle. Therefore the enzyme with the
+accessory proteins and the bound DNA form a 2-string tangle,
+where the proteins form the ball that defines the tangle. Call
+this tangle <em>E</em>. Likewise, the recombination sites can be
+surrounded by a small ball in the interior of <em>E</em>. Let <em>P</em>
+be this tangle in the interior of <em>E</em> where the DNA is cut
+by the enzyme. This description is illustrated in the following
+figure . </font></p>
+<p align="center"><font size="4"><img height="173" src="tangle_as_fig.jpg" width="406"/></font></p>
+<p><font size="4"><b>Tangle Model and Assumption number 1. </b></font><font size="3">In a site-specific recombination reaction, the
+recombinase and accessory proteins bind to the DNA. Enzyme and
+proteins are modelled as a ball, the circular DNA is modelled as
+a knot or link that intersects the ball in two strands. The
+synaptosome is a 2-string tangle called E. E can be seen as the
+sum of two tangles, </font><font size="4"><img align="middle" alt="$O_{b}+P$" height="29" src="img4.gif" width="54"/>.</font></p>
+<p><font size="4">The formulation of the model requires a few
+assumptions. </font></p>
+<p><font size="4"><i><u>Assumption 1</u></i>: <img align="middle" alt="$E=O_{b}+P$" height="29" src="img5.gif" width="89"/><i>,
+where </i><img align="middle" alt="$O_{b}$" height="29" src="img6.gif" width="23"/><i> contains all the DNA that is bound to
+the enzyme or to the accessory proteins, except for the
+recombination sites that are contained in </i><em>P</em>. </font></p>
+<p><font size="4">Let <img align="middle" alt="$O_{f}$" height="29" src="img7.gif" width="25"/> be the tangle formed by
+the ball <img align="middle" alt="$\Bbb{S}^{3}-E$" height="33" src="img8.gif" width="54"/> that contains the DNA not bound to the
+enzyme/accessory proteins complex. Note that both topology and
+sequence of <img align="middle" alt="$O_{b}$" height="29" src="img6.gif" width="23"/> and <img align="middle" alt="$O_{f}$" height="29" src="img7.gif" width="25"/> remain unchanged upon
+recombination. <img align="middle" alt="$O_{f}$" height="29" src="img7.gif" width="25"/> contains all the relevant topological
+information from the free DNA. Assumption 1 allows to see the
+whole synaptic complex simply as: <br/>
+</font></p>
+<p align="center"><font size="4"><img alt="\begin{displaymath}
+N(O_{f}+O_{b}+P)=N(O_{f}+E)
+\end{displaymath}" height="29" src="img9.gif" width="217"/> <br clear="all"/>
+</font></p>
+<p><font size="4">Note that both <img align="middle" alt="$O_{b}$" height="29" src="img6.gif" width="23"/> and <img align="middle" alt="$O_{f}$" height="29" src="img7.gif" width="25"/> remain unchanged upon recombination. Let <img alt="$O$" height="15" src="img10.gif" width="17"/> be the
+``outside tangle'' defined by the following sum: <br/>
+</font></p>
+<p align="center"><font size="4"><img alt="\begin{displaymath}
+O=O_{f}+O_{b}
+\end{displaymath}" height="29" src="img11.gif" width="91"/> <br clear="all"/>
+</font></p>
+<p><font size="4">In the calculations one will usually refer to
+the tangle <img alt="$O$" height="15" src="img10.gif" width="17"/>
+instead of <img align="middle" alt="$%%
+O_{b}$" height="29" src="img12.gif" width="23"/> and <img align="middle" alt="$O_{f}.$" height="29" src="img13.gif" width="29"/> If the substrate is a knot
+or link <img align="middle" alt="$K_{1}$" height="29" src="img14.gif" width="25"/>, then the synaptic complex can be
+represented by a <b>substrate equation</b> of the form: <br/>
+</font></p>
+<p align="center"><font size="4"><img alt="\begin{displaymath}
+N(O+P)=K_{1}
+\end{displaymath}" height="28" src="img15.gif" width="111"/> <br clear="all"/>
+</font></p>
+<p><font size="4">Recombination occurs during the local movement,
+and strand exchange is restricted to the tangle <em>P</em>. This
+motivates the second mathematical assumption. <i><u>Assumption 2</u></i>:
+<i>The recombinase action corresponds to a tangle surgery where
+the tangle </i><em>P</em><i> is changed by the tangle R.</i> With
+this assumption, after one round of recombination leading a
+knotted or linked product of type <img align="middle" alt="$K_{2}$" height="29" src="img17.gif" width="25"/>, the
+parental tangle <em>P</em> is removed from the synaptosome and
+replaced by the recombinant tangle <i>R</i>. The outside tangle <em>O</em>
+remains unchanged. The post-recombination synaptic complex is
+represented by the <b>product equation</b>: <br/>
+</font></p>
+<p align="center"><font size="4"><img alt="\begin{displaymath}
+N(O+R)=K_{2}
+\end{displaymath}" height="28" src="img18.gif" width="112"/> <br clear="all"/>
+</font></p>
+<p align="left"><font size="4">Therefore, one round of
+recombination action is translated to the following system with
+two tangle equations: <br/>
+<!-- MATH
+ \begin{equation}
+\left\{  \begin{array}{lll} N\left( O_{f}+O_{b}+P\right) =N(O+P) & = & K_{1} \\ N\left( O_{f}+O_{b}+R\right) =N(O+R) & = & K_{2} \end{array} \right.
+\end{equation}
+ --></font></p>
+<div align="right">
+<table border="0" width="100%">
+<tbody><tr>
+<td align="center" nowrap=""><a name="tangle_sys"></a><font size="4"><img alt="\begin{displaymath}
+\left\{
+\begin{array}{lll}
+N\left( O_{f}+O_{b}+P\right) ...
+...{f}+O_{b}+R\right) =N(O+R) &amp; = &amp; K_{2}
+\end{array}
+\right.
+\end{displaymath}" height="45" src="img19.gif" width="294"/></font></td>
+<td align="right" width="10"><font size="4">(1)</font></td>
+</tr>
+</tbody></table>
+</div>
+<p align="right"><font size="4"><br clear="all"/>
+</font></p>
+<p><font size="4">where <!-- MATH
+ $\left\{ O_{f},O_{b},P,R\right\}$
+ --> <img align="middle" alt="$\left\{ O_{f},O_{b},P,R\right\} $" height="31" src="img20.gif" width="103"/> are unknown. In general, two tangle
+equations on 4 unknowns are not enough to find a unique solution
+array <!-- MATH
+ $%% \left( O_{f},O_{b},P,R\right)$
+ --> <img align="middle" alt="$%%
+\left( O_{f},O_{b},P,R\right) $" height="31" src="img21.gif" width="100"/>, or even a finite number of solutions. </font><a href="https://web.archive.org/web/20040213002050fw_/http://bio.math.berkeley.edu/TangleSolve/tmodel/synaptic_complex.jpg"><font size="4">Electron micrographs</font></a><font size="4"> of the synaptic complex can sometimes characterize <img align="middle" alt="$%%
+O_{f}$" height="29" src="img22.gif" width="25"/>. For unknotted substrates it can generally be
+deduced that <img align="middle" alt="$%%
+O_{f}$" height="29" src="img22.gif" width="25"/>is rational, in particular,
+<!-- MATH
+ $%% O_{f}=\left( 0\right)$
+ --><img align="middle" alt="$%%
+O_{f}=\left( 0\right) $" height="31" src="img23.gif" width="66"/> and therefore, <!-- MATH
+ $O=O_{f}+O_{b}=O_{b}$
+ --> <img align="middle" alt="$O=O_{f}+O_{b}=O_{b}$" height="29" src="img24.gif" width="136"/>. </font></p>
+<p> </p>
+<h1><a name="substrates">Other substrates</a> </h1>
+<p><font size="4">When the tangle model was used to study the Tn3
+resolvase system [T2], the following assumption was crucial to
+unveil the enzymatic mechanism: </font></p>
+<p><font size="4"><i><u>Assumption 3 </u></i>: <i>The
+recombination mechanism is constant, independent of the geometry
+(supercoiling) and topology (knotting and linking) of the
+substrate population.</i> </font></p>
+<p><font size="4">This means, in part, that the recombination is
+restricted to the interior of the ball, and that the substrate's
+configuration outside the ball remains fixed during this event.
+It also implies that both <em>P</em> and <i>R</i> are constant,
+they do not depend on the nature of neither substrate nor product
+of recombination, and they are characteristic of the enzyme. Any
+change in the substrate would be translated into a change in the
+tangle <em>O</em> (in particular a change in <img align="middle" alt="$O_{f}$" height="29" src="img7.gif" width="25"/>). It follows
+from <i>Assumption 3 </i>that the tangles <!-- MATH
+ $\left\{ O_{b},P,R\right\}$
+ --> <img align="middle" alt="$\left\{ O_{b},P,R\right\} $" height="31" src="img25.gif" width="76"/> are constants reflecting enzyme binding and
+mechanism, while the tangle <img align="middle" alt="$O_{f}$" height="29" src="img7.gif" width="25"/> reflects the variable
+geometry and topology of the substrates. In the case of enzymes
+with topological selectivity and specificity (e.g. Gin, Tn3 and
+Xer), given a fixed substrate <img align="middle" alt="$K_{1}$" height="29" src="img14.gif" width="25"/> the tangles <img align="middle" alt="$O,P$" height="29" src="img26.gif" width="36"/>
+and <i>R</i> are constants uniquely determined by the enzyme.
+Furthermore, if one considers two experiments where a given
+enzyme acts on topologically different substrates, then two
+systems of equations appear in the tangle analysis. <i>Assumption
+3</i> allows to take <em>P</em> and <i>R</i> constant in both
+systems. The tangle <em>O</em> will be denoted <!-- MATH
+ $O^{\left( 1\right) }$
+ --> <img alt="$O^{\left( 1\right) }$" height="18" src="img27.gif" width="34"/> for experiment 1 and <!-- MATH
+ $O^{\left( 2\right) }$
+ --> <img alt="$O^{\left( 2\right) }$" height="18" src="img28.gif" width="34"/> for
+experiment 2. In the cases of Gin and Xer the assumption of
+constant mechanism is supported by experimental data (Gin [S1],
+Xer [S3]). On the other hand, there are some enzymes such as <img align="middle" alt="$\lambda -$" height="29" src="img29.gif" width="26"/>Int, mutant Gin and FLP, that have no topological
+selectivity. In those cases, for a single substrate, the tangle <em>O</em>
+can vary. Assumption 3 in these cases only implies that <em>P</em>
+and <i>R</i> are constant. Thus, the mechanism is not constant
+and it is not clear whether the enzymatic binding (characterized
+by the tangle <em>O</em>) changes from one substrate type to
+another. </font></p>
+<p><br/>
+</p>
+<h1><a name="processive">Processive recombination</a> </h1>
+<p><font size="4">Processive recombination must be incorporated
+to the tangle model without contradicting the assumption of
+constant mechanism. Since <em>P</em> is assumed to be changed by <i>R</i>
+upon one round of recombination, <i>R</i> will be assumed to go
+to <img align="middle" alt="$R+R$" height="29" src="img30.gif" width="48"/> after two rounds and so on and so forth. In this way
+processive recombination is modelled by tangle addition.
+Experimental data obtained from processive recombination adds
+equations to the system (1). These equations involve the same
+unknowns as before. </font></p>
+<p><font size="4"><i><u>Assumption 4</u></i>: <i>Processive
+recombination acts by tangle addition (see Figure ).</i> The
+implication is that, after n rounds of processive recombination,
+the post-recombination synaptosome is <img align="middle" alt="$\left( O_{b}+nR\right) $" height="31" src="img33.gif" width="76"/>. This leads to a new equation for each round of
+recombination: <br/>
+</font></p>
+<p align="center"><font size="4"><img alt="\begin{displaymath}
+N(O+nR)=n^{th}\ \text{round\ product}
+\end{displaymath}" height="28" src="img34.gif" width="231"/> <br clear="all"/>
+</font></p>
+<p><font size="4">In the tangle analysis of Tn3 resolution [T2]
+and in that of Gin inversion [T4], data arising from the first
+few (three or four) rounds of recombination is enough to find
+unique solutions to the tangle equations. In addition, these
+computations correctly predict the products of additional rounds
+of processive recombination. </font></p>
+<p align="center"><img height="233" src="tangle_equ_fig.jpg" width="445"/></p>
+<p><b>The tangle model for processive site-specific
+recombination.</b> <font size="2">This figure illustrates the
+tangle model's assumptions 2, 3 and 4 for processive
+recombination. </font></p>
+<p> </p>
+<h1><a name="others">Other considerations</a> </h1>
+<p><font size="4">There are other parameters involved in tangle
+analysis that can be taken in consideration to ease the
+calculations. This section contains an overview of these factors.</font><br/>
+</p>
+<h2>Choices for<em>P</em> </h2>
+<p><font size="4"><em>P</em> is by definition a small ball in the
+interior of <img alt="$E$" height="14" src="img2.gif" width="17"/>.
+The tangle <em>P</em> intersects the DNA substrate only in the
+regions, within the two recombination sites, where strand
+exchange takes place. In general such regions correspond to very
+short DNA segments <img align="middle" alt="$(\simeq 5-50bp)$" height="31" src="img35.gif" width="92"/>. Therefore, without loss
+of generality, the strands of <em>P</em>can be viewed as two
+straight line-segments. The tangle <em>P</em> is then a ball with
+two <b>straight</b> embedded strands. Any tangle diagram for <em>P</em>
+will look like one of the trivial tangles <img align="middle" alt="$(0),(1),(-1)$" height="31" src="img36.gif" width="92"/> or <img align="middle" alt="$(\infty )=(0,0)$" height="31" src="img37.gif" width="89"/>. From [T5], <img align="middle" alt="$P=(0)$" height="31" src="img38.gif" width="58"/> is the only possibility in
+order to model processive recombination by tangle addition. If
+there is no processive recombination, then any choice of <em>P</em>
+among the tangles <img align="middle" alt="$(0),(0,0)$" height="31" src="img39.gif" width="67"/> or <img align="middle" alt="$(\pm 1)$" height="31" src="img40.gif" width="37"/> is valid.
+If <em>P</em> is chosen to be <img align="middle" alt="$\left( 0\right) $" height="31" src="img41.gif" width="25"/>then
+the set of equations is simplified. Now the substrate equation
+becomes: <br/>
+</font></p>
+<p align="center"><font size="4"><img alt="\begin{displaymath}
+N\left( O\right) =K_{1}.
+\end{displaymath}" height="28" src="img42.gif" width="88"/> <br clear="all"/>
+</font></p>
+<p><font size="4">Once <em>P</em> is determined, a framework is
+established where the other tangles can be defined. </font><br/>
+</p>
+<h1><a name="conc">Conclusion</a> </h1>
+<p><font size="4">Recapitulating, the tangle model sees the
+circular DNA substrate and products as knots or links. The
+site-specific recombinase and its accessory proteins are seen as
+a ball that intersects the DNA knot or link in two strands. The
+interior of the ball is divided in two regions. One of them is
+restricted to strand exchange and corresponds to a parental
+tangle <em>P</em>. This tangle can be chosen to be <img align="middle" alt="$P=\left( 0\right) $" height="31" src="img45.gif" width="58"/>. <em>P</em> represents the only region in
+the synaptic complex that changes upon recombination. The region
+outside <em>P</em> but inside the ball, called <img align="middle" alt="$O_{b}$" height="29" src="img6.gif" width="23"/>, traps all the conformation that, together with the
+change from <em>P</em> to <i>R</i>, determines the topology of
+the recombination products. Finally, the region outside the ball,
+<img align="middle" alt="$O_{f}$" height="29" src="img7.gif" width="25"/>, detects the variation between substrates with
+different topology. The tangle model assumes that the synaptic
+complex can be expressed as <img align="middle" alt="$N\left( O+P\right) =K_{0}$" height="31" src="img46.gif" width="120"/> where <img align="middle" alt="$O=O_{f}+O_{b}$" height="29" src="img47.gif" width="96"/> is called the outside
+tangle. Recombination is modelled by a tangle surgery that
+replaces <em>P</em> by the recombinant tangle <i>R</i>, thus
+leading a product equation <img align="middle" alt="$N\left(
+O+R\right) =K_{1}$" height="31" src="img49.gif" width="120"/>. The assumption of constant mechanism implies that <em>P</em>
+and <i>R</i> are constants uniquely determined by the enzyme. In
+the cases when there is both topological selectivity and
+specificity (<i>e.g.</i> Tn3 resolvase, Gin, Xer ), the tangle <img alt="$O$" height="15" src="img10.gif" width="17"/> is also
+determined uniquely by both the enzyme and the topology of the
+substrate. If there is no topological selectivity (<i>e.g.</i> <img align="middle" alt="$\lambda -$" height="29" src="img29.gif" width="26"/>Int, mutant Gin and FLP) then, for a fixed substrate,
+<em>P</em> and <i>R</i> are constant but <img alt="$O$" height="15" src="img10.gif" width="17"/> can vary. Furthermore,
+processive recombination is modeled by tangle addition. A
+recombination event that consists of n-rounds of processive
+recombination is translated into a system of <img align="middle" alt="$n+1$" height="28" src="img50.gif" width="41"/> equations with
+unknowns <img alt="$O^{\left(
+i\right) }$" height="18" src="img51.gif" width="32"/>, <em>P</em> and <i>R</i>. The tangle <img alt="$O^{\left(
+i\right) }$" height="18" src="img51.gif" width="32"/> is allowed to change from one equation to another if
+and only if there is no topological selectivity. This introduces
+more unknowns to the system, and the analysis becomes much more
+difficult. It was seen in Chapter 3 that solutions for a system
+of three tangle equations with three unknowns can be found if the
+unknowns are rational tangles. It was also seen that detecting
+rationality is not an easy task. In the next two chapters we will
+undertake the tangle analysis of two different site-specific
+recombination systems: Gin and Xer. Both of these systems have
+topological selectivity and specificity, Gin undergoes processive
+recombination and Xer does not. At the end of the chapter on Gin
+recombination we also analyze data arising from processive
+recombination by a mutant of Gin that has lost its topological
+selectivity. In this case it is shown that the outside tangles
+must vary for different events with same substrates. </font></p>
+</body></html>

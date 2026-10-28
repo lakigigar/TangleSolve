@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A browser-based reconstruction of TangleSolve's site-specific recombination analysis.">
+  <title>TangleSolve · modern web app</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../index.html"><span class="brand-mark">∞</span><span>TangleSolve <small>modern reconstruction</small></span></a>
+    <nav><a href="../tutorial.html">Original tutorial</a><a href="../tmodel/frames2.htm">Tangle model</a><a href="../index.html">Archive home</a></nav>
+  </header>
+  <main>
+    <section class="intro">
+      <p class="eyebrow">DNA TOPOLOGY WORKBENCH</p>
+      <h1>Explore recombination through tangles.</h1>
+      <p>Enter observed DNA knots or links to compute candidate rational-tangle mechanisms. Select a solution to inspect its equation and an explanatory diagram.</p>
+    </section>
+    <div class="workspace">
+      <section class="panel input-panel" aria-labelledby="input-title">
+        <div class="panel-title"><span class="step">01</span><h2 id="input-title">Input</h2></div>
+        <div class="tabs" role="tablist" aria-label="Analysis mode">
+          <button type="button" class="tab active" data-mode="nonprocessive" aria-selected="true">Non-processive</button>
+          <button type="button" class="tab" data-mode="processive" aria-selected="false">Processive</button>
+          <button type="button" class="tab" data-mode="diagram" aria-selected="false">Tangle diagram</button>
+        </div>
+        <form id="analysis-form">
+          <div id="observations">
+            <label for="substrate">Substrate <span>4-plat vector, fraction, Conway symbol, or candidates separated by semicolons</span></label>
+            <div class="field-row"><input id="substrate" value="1" autocomplete="off" spellcheck="false" required><button type="button" class="table-button" data-target="substrate">From table</button></div>
+            <div id="nonprocessive-fields">
+              <label for="product">Product <span>Use semicolons for alternatives; leave blank when using crossing number</span></label>
+              <div class="field-row"><input id="product" value="(1 2 1)" autocomplete="off" spellcheck="false"><button type="button" class="table-button" data-target="product">From table</button></div>
+              <label for="crossings">Or product crossing number <span>0–10</span></label>
+              <input id="crossings" type="number" min="0" max="10" placeholder="e.g. 7">
+            </div>
+            <div id="processive-fields" hidden>
+              <label for="products">Products in reaction order <span>One round per line; semicolons for alternatives within a round</span></label>
+              <textarea id="products" rows="5" spellcheck="false" placeholder="(1 2 1)&#10;(1 4 1)"></textarea>
+              <label class="checkbox-label"><input id="unknown-order" type="checkbox"> Product order is unknown</label>
+            </div>
+          </div>
+          <div id="diagram-fields" hidden>
+            <label for="of">Outside front tangle O<sub>f</sub></label><input id="of" value="0" spellcheck="false">
+            <label for="ob">Outside back tangle O<sub>b</sub></label><input id="ob" value="-1" spellcheck="false">
+            <label for="r">Recombinant tangle R <span>Integer twists</span></label><input id="r" value="5" spellcheck="false">
+            <label for="rounds">Recombination rounds</label><input id="rounds" type="number" min="1" max="8" value="2">
+          </div>
+          <div class="actions"><button class="primary" type="submit">Solve equations <span aria-hidden="true">→</span></button><button id="sample" type="button">Load Xer example</button></div>
+        </form>
+        <p class="input-help">Examples: <code>(1 4 1)</code>, <code>5/6</code>, or <code>b(6,5)</code>. Use <code>#7</code> for all seven-crossing 4-plats. The unknot is <code>1</code>; the two-component unlink is <code>0</code>.</p>
+      </section>
+      <section class="panel selection-panel" aria-labelledby="selection-title">
+        <div class="panel-title"><span class="step">02</span><h2 id="selection-title">Solutions</h2><span id="count" class="count">0</span></div>
+        <p id="summary" class="summary">Solve an example to see candidate mechanisms.</p>
+        <div id="solutions" class="solutions" role="listbox" aria-label="Candidate solutions"></div>
+      </section>
+      <section class="panel display-panel" aria-labelledby="display-title">
+        <div class="panel-title"><span class="step">03</span><h2 id="display-title">Display</h2></div>
+        <div id="display" class="display-empty">Select a solution to inspect its tangles and predicted product.</div>
+      </section>
+    </div>
+    <section class="method-note"><strong>About this reconstruction.</strong> The non-processive Xer example matches the recovered 2001 Java program (16 solutions). A 2004 applet screenshot shows 12, indicating a later version difference. The rational-R processive branch is experimental. The SVG is a schematic equation; recovered knot images appear below it when available.</section>
+  </main>
+  <dialog id="knot-dialog" aria-labelledby="knot-dialog-title">
+    <div class="dialog-head"><h2 id="knot-dialog-title">4-plat table</h2><button id="close-dialog" type="button" aria-label="Close">×</button></div>
+    <p>Select a crossing number and choose a 4-plat vector. Recovered diagram images cover every table entry through eight crossings. Missing nine- and ten-crossing images are replaced with generated 4-plat drawings.</p>
+    <label for="table-crossings">Crossings</label><select id="table-crossings"></select>
+    <div id="table-options" class="table-options"></div>
+  </dialog>
+  <script type="module" src="main.js"></script>
+</body>
+</html>

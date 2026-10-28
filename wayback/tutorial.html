@@ -1,0 +1,302 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head><script type="text/javascript" src="https://web-static.archive.org/_static/js/bundle-playback.js?v=3grhEDQT" charset="utf-8"></script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/wombat.js?v=o9P2E1FK" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};</script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/ruffle/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://bio.math.berkeley.edu:80/TangleSolve/tutorial.html","20040203040702","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1075781222");
+</script>
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/banner-styles.css?v=1utQkbB3" />
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/iconochive.css?v=3PDvdIFv" />
+<!-- End Wayback Rewrite JS Include -->
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 2.0">
+<title>TangleSolve Tutorial</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<br><br>
+<p align="center"><font size="6"><strong>TangleSolve 
+Tutorial</font></strong></p>
+<br><br>
+<blockquote>
+<font size="4"><strong>
+    <p>Overview</p></font></strong>
+</blockquote>
+<br>
+<blockquote>
+    <p>Tangle Solve graphical user-interface:</p>
+</blockquote>
+
+<p align="center"><img src="/web/20040203040702im_/http://bio.math.berkeley.edu/TangleSolve/tsolvefigure.jpg" width="1098" height="790"></p>
+
+<blockquote>
+	<u1>
+	   <li><font size="4"><strong>Panel A: Input 
+           Pane.</strong> This is where the user inserts the 
+           data.</font></li>
+	</u1>
+	<blockquote>
+	     <o1>
+ 		<u1>
+		   <li><font size="4"><strong>Non Processive</strong> tab 
+		(shown in the figure).</li> 
+		</u1>
+		<blockquote> 
+			<p><font size="4"> This case is used to analyze 
+		mechanisms of enzymes whose action is known (or believed) to be 
+		non-processive, <i> i.e. </i> such that the enzyme binds the 
+		two sites and mediates one single recombination reaction 
+                before releasing the DNA. The ideal input data 
+                consists of one specific substrate topology and one 
+                product topology. Therefore in practice some knowledge 
+                about substrate 
+                and product topologies is needed (exact knot or catenane
+                type, a range of possible knot types, or, at least, 
+                crossing number).The user is 
+                asked to input the topological information of substrate and 
+                of recombination product. The program then solves the 
+                resulting system of two tangle equations and displays the 
+                solutions in the Selection pane (<strong>Panel B</strong> 
+                in the figure). If more than one knot or catenane type are 
+                listed in each input line, the program computes all 
+                systems of two equations that accommodate the given data 
+                and finds solutions for them. All solutions found are shown 
+		in the selection pane.</font></p> 
+		</blockquote>
+		<u1>
+		<li><font size="4"><strong>Processive</strong> tab.</li>
+		</u1>
+		<blockquote>
+			<p><font size="4">This option is used to analyze 
+                the action of enzymes known 
+                (or assumed) to act processively (<i> i.e.</i> enzymes 
+                that bind to the 
+                recombination sites and act multiple times before 
+                releasing the DNA molecule). Ideally the user would 
+                input one substrate topology, and one or more product 
+                topologies in a specific order. In practice some knowledge 
+                about substrate and product topologies is needed (exact 
+                knot or catenane type, a range of possible knot types, or, 
+                at least, crossing number). Knowing the order in which 
+                the recombination products are generated is not 
+                necessary for the analysis, although it improves accuracy 
+                of the resuts. If the substrate and the order of the 
+                products is known a new input pane is generated where the 
+                user can insert the data. The program computes solutions 
+                for the corresponding system of tangle equations. If the 
+                order is unknown, then the program generates all possible 
+                systems of tangle equations to accommodate the data. The 
+                number of recombination rounds (number of times that the 
+                enzyme acts on each substrate molecule) is a variable that 
+                determines the number of equations and diagrams 
+                displayed, for each solution set, in <strong>panel 
+                C</strong>. This variable allows to make predictions on 
+                recombination products.</font></p>
+		</blockquote>
+		<u1>
+		<li><font size="4"><strong>Tangle Diagram</strong> 
+                tab.</li>
+		</u1>
+		<blockquote>
+                <p><font size="4"> This option allows the user to insert 
+                known values for 
+                the tangles Of, Ob and R to obtain their graphical 
+                representation.</font></p>
+		</blockquote>
+	     </o1>
+	</blockquote>
+        <u1>
+           <li><font size="4"><strong>Panel B: Selection 
+	     Pane.</strong> All solutions found by the program are listed 
+             here. The user can select a solution by clicking on it, and 
+             this solution is then displayed in panel 
+             <strong>C</strong>.</font></li>
+        </u1>
+<blockquote></blockquote>
+	<u1>
+           <li><font size="4"><strong>Panel C: Display Pane.</strong> Once 
+             a given solution is selected, the diagrams corresponding to the 
+             system of two equations, including the tangle diagrams, are 
+             drawn. The tangles are represented in their canonical form. 
+             Knots and links (catenanes) are represented both in their 
+             4-plat form and with the standard knot diagram from D. Rolfsen's 
+             knot table (from <strong> <a href="https://web.archive.org/web/20040203040702/http://bio.math.berkeley.edu/TangleSolve/references.html" target="References"> [K1]</a></strong>, with permission of the 
+            author).</font></li>
+        </u1>
+
+</blockquote>
+<hr>
+<blockquote>
+<font size="4"><strong>
+    <p>Step by Step guide:</p></font></strong>
+</blockquote>
+<blockquote>
+    <p>The tangle analysis using this program can be done in
+    three steps:</p>
+<p> <strong>1.- </strong> Input the experimental data as a 4-plat vector 
+(a1,a2,...,an), 
+4-plat classifying rational number b/a (or the Conway notation b(a,b)), 
+or by selecting the knot or catenane 
+diagram from the knot table. A sample input can be seen by 
+pressing the <strong> Sample input</strong> button. </p>
+<p>NOTE: by convention the unknot (i.e. one circle that can lay flat on a 
+plane without going over itself) is considered to have 1 crossing since 
+its 4-plat classifying vector is (1). Under this convention the only 
+element with 0 crossings is the unlink, that consists of two unknotted 
+circles, and whose 4-plat vector is (0).</p>
+<p><strong> 2.-</strong> Press the <strong>Solve </strong>button to obtain 
+the set of solutions. </p>
+<p><strong> 3.-</strong> Select any of the listed solutions to obtain 
+its graphical representation. The diagrams allow the users to 
+discard solutions which do not satisfy certain biological constraints 
+(<i>e.g.</i> site orientation of both substrate and product). 
+</p>
+</blockquote>
+<hr>
+<blockquote>
+    <p>We illustrate these steps with a concrete example:</p>
+<p align="center"><strong> Tangle analysis of Xer site-specific 
+recombination on catenated substrates.</strong></p>
+</blockquote>
+
+<ol>
+    <li><strong>Xer recombination</strong></li>
+</ol>
+
+<blockquote>
+    <p>Xer is a site-specific recombination system of 
+<i>Escherichia coli</i> that resolves dimeric molecules. When 
+acting on unknotted substrates, the enzymes XerC and XerD act 
+cooperatively to produce a catenated product with a single 
+topology: a right-handed 4-crossing torus catenane <strong> <a href="https://web.archive.org/web/20040203040702/http://bio.math.berkeley.edu/TangleSolve/references.html" target="References"> [S3]</a></strong>. No evidence of processive 
+recombination has been 
+found for Xer recombination. This means that the enzyme binds to its 
+substrate, mediates a single recombination event, and releases the 
+DNA molecule. Therefore, to a single reaction correspond only one 
+substrate knot type and one product knot type. The
+    experimental work of Bath <i>et al.</i> <strong> <a href="https://web.archive.org/web/20040203040702/http://bio.math.berkeley.edu/TangleSolve/references.html" target="References"> [S5]</a></strong> showed that Xer 
+recombination on a right-handed 6-crossing torus link (generated by 
+Int recombination) results in a 7-crossing product of unknown type.</p>
+</blockquote>
+<p align="left">2. <strong>Input data</strong></p>
+<blockquote>
+    <p>The input knot/catenane must fall into the category of 4-plat
+    knots/links. 4-plats are obtained by starting with four 
+    strands, alternatively braiding the first with the second, and the 
+    second with the third, and finally connecting the strands as shown 
+    in the figure below.</p>
+    <p align="center"><img src="/web/20040203040702im_/http://bio.math.berkeley.edu/TangleSolve/4plat.jpg" width="230" height="82"></p>
+
+   <p> All knots with 7 or less crossings, as well as all catenanes 
+   with 6 or less crossings, belong to the 4-plat family. 
+   Furthermore, all DNA knots and catenanes products of site-specific
+   recombinations that have been observed under the electron microscope 
+   have also been 4-plats.</p>
+   <p> 4-plats admit a classification and so can be represented by a
+   classifying vector with integer entries, or by a classifying 
+   rational number. </p>
+
+    <p align="left">The vector record the number of times a 
+    pair of strands goe around each other. A rational number is 
+    assigned to this vector by a continued fraction 
+    calculation (illustrated below). The figure shows the (1, 6,
+    1) catenane (note the crossing sign convention: all these 
+    crossings are positive). The corresponding continued fraction 
+    is 1/(1 + 1/(6 + 1)) = 7/8. This catenane is the right-handed 
+    8-crossing torus catenane, with classifying rational number 
+    7/8, and associated Conway symbol b(8,7).
+    </p>
+   In the input pane the knot and catenane types of 
+   substrates and products of recombination can be entered in several
+   different formats:
+   in mathematical form using the canonical vector or the classifying 
+   rational number for the 4-plat, or in graphical form by chosing the
+   desired knot or catenane from the knot table.</p>
+    <p align="left">In the case of Xer recombination on unknotted 
+   substrates or on substrates that are right-handed (RH) 6-crossing 
+   torus catenanes, the input data is:</p> 
+    <p align="left"><em>Substrates:</em></p>
+    <p align="left"><em>Reaction 1) Unknot = (1); Conway symbol = 
+    b(1,1); rational number = 1</em></p>
+    <p align="left"><em>Reaction 2) RH 6 torus catenane = (1 4 1); 
+    Conway symbol = b(6,5), rational number = 5/6</em></p>
+    <p align="left"><em>Products:</em></p>
+    <p align="left"><em>Reaction 1) RH 4 torus catenane = (1 2 1); 
+    Conway symbol = b(4,3); rational number = 3/4</em></p>
+    <p align="left"><em>Reaction2) product with 7 crossings </em></p>
+    <p align="left">These data must be entered into the input
+    area shown below:</p>
+    <p align="left"><img src="/web/20040203040702im_/http://bio.math.berkeley.edu/TangleSolve/inputarea.jpg" width="576" height="113"></p>
+    <p align="left">In the "unknot to b(4,3)" case.</p>
+    <ol>
+        <li><p align="left">Input the knot/catenanes type of the
+            substrate by typing 1 into the <strong>substrate</strong>
+            text field, or select the unknot from the knot table
+            by pressing the button <strong>From Table</strong>.</p>
+        </li>
+        <li><p align="center">In the same manner type (1 2 1),
+            b(4,3) or 3/4 into <strong>product</strong> text
+            field, or select the knot from the knot table. The
+            knot table is shown below:<img src="/web/20040203040702im_/http://bio.math.berkeley.edu/TangleSolve/table.jpg" width="400" height="317"></p>
+        </li>
+        <li><p align="left">The table allows you to see the
+            pictures of 4-plat knot/catenaes up to 10 crossings and
+            allows you to select them. Press the pop-up button in
+            the lower left corner that says <strong>x-crossings</strong>
+            to browse through different crossing knots/catenanes. 
+            <strong>Double-click
+            </strong>on the knot/link diagram to make 
+            your selection.</p>
+        </li>
+        <li><p align="left">Once the data is inserted, press the 
+        <strong>Solve</strong> button.</p>
+        </li>
+    </ol>
+</blockquote>
+
+<p align="left">3. <strong>The solutions</strong></p>
+
+<blockquote>
+    <p align="left">A list of solutions is displayed in the
+    output pane. The next figure shows the list after expanding the 
+tree control:</p>
+    <p align="left"><img src="/web/20040203040702im_/http://bio.math.berkeley.edu/TangleSolve/solns.jpg" width="390" height="166"></p>
+    <p align="left">These are the solutions obtained for Xer 
+recombination in the "unknot to RH4 torus catenane" case. Select a 
+solution from the list to see the corresponding tangle and knot 
+diagrams of the corresponding enzymatic mechanism. 
+</p>
+</blockquote>
+
+<blockquote>
+    <p><a href="references.html"><strong>References</strong></a></p>
+</blockquote>
+</body>
+</html>
+<!--
+     FILE ARCHIVED ON 04:07:02 Feb 03, 2004 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 15:54:34 Oct 28, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  capture_cache.get: 0.842
+  captures_list: 0.57
+  exclusion.robots: 0.055
+  exclusion.robots.policy: 0.043
+  esindex: 0.008
+  cdx.remote: 5.835
+  LoadShardBlock: 203.742 (3)
+  PetaboxLoader3.datanode: 262.07 (4)
+  load_resource: 173.471
+  PetaboxLoader3.resolve: 97.702
+-->
